@@ -1,22 +1,14 @@
 ## Tasks APIs
 
+- Desenvolvido seguindo a clean architecture possui dois endpoints, sendo um para o usuário cadastrar uma nova task e outro onde um administrador pode consultar uma listagem de tasks cadastradas, todos os endpoints possuem teste de unidade
+
 ## Docker Dev Environment
 
-- Primeiro gerar as imagens que são usadas pelos containers
-
-```
-$ sudo docker-compose -f docker-compose-dev-images.yaml build tasks-img-api
-```
-
-- Depois, rodar os containers de desenvolvimento
-
-```
-$ sudo docker-compose up
-```
+- Baixar o repositorio tasks-api-docker e seguir as orientações
 
 ## Criar base de dados
 
-- Pelo workbench acessar com o host 0.0.0.0:33061 (username e pass estão na .env)
+- Pelo workbench acessar com o host 0.0.0.0:33061 (olhar .env)
 
 ```
 CREATE TABLE `tasks` (
@@ -54,11 +46,8 @@ Body type json
 	"status": 1
 }
 
-http://localhost:4020/api/v1/user/list-tasks
+http://localhost:4020/api/v1/admin/list-tasks
 ```
 ## Executar os testes automatizados
 
-- Os testes estão separados entre unitarios e de integração
 - Os testes unitarios estao nos arquivos .spec e podem ser acessados via comando npm run test:unit
-- Os testes de integração estao nos arquivos .test e podem ser acessados via comando npm run test:integration
-- Tambem é possivel rodar todos os testes com o comando npm run tes:all

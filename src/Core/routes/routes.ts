@@ -1,6 +1,6 @@
 import {Express, Request, Response} from "express";
 import UserTasksRouter from "@Core/routes/User/Tasks/UserTasksRouter";
-
+import AdminTasksRouter from "@Core/routes/Admin/Tasks/AdminTasksRouter";
 export default class Routes {
     constructor(private app: Express) {
         this.setRoutes();
@@ -9,6 +9,7 @@ export default class Routes {
 
     setRoutes() {
         new UserTasksRouter(this.app);
+        new AdminTasksRouter(this.app);
     }
 
     setRouteIfNotFound(){

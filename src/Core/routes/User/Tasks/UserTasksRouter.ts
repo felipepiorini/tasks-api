@@ -10,7 +10,5 @@ export default class UserTasksRouter extends Router {
           return ResponseAdapter.adapt(SaveTaskPresenter.factory, req, res);
         });
 
-      
-
     }
 }
