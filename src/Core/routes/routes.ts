@@ -2,6 +2,8 @@ import {Express, Request, Response} from "express";
 import UserTasksRouter from "@Core/routes/User/Tasks/UserTasksRouter";
 import AdminTasksRouter from "@Core/routes/Admin/Tasks/AdminTasksRouter";
 export default class Routes {
+
+    // TODO - Middleware
     constructor(private app: Express) {
         this.setRoutes();
         this.setRouteIfNotFound()
