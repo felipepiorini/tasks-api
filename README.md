@@ -11,6 +11,8 @@
 - Pelo workbench acessar com o host 0.0.0.0:33061 (olhar .env)
 
 ```
+CREATE DATABASE `tasks`
+
 CREATE TABLE `tasks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
